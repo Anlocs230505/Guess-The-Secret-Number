@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main() 
+{
+    int sn=73,n;
+    printf("You Will Have 3 Gusess :");
+    for(int j=1;j<=3;j++)
+    {
+    printf("\n Enter The Number Between 1-100 :") ;
+    scanf("%d",&n);
+    if(n==sn  &&  j==1)
+    {
+        printf("\n You Won In First Chance");
+        break;
+    }
+    else if(n==sn  &&  j==2)
+    {
+        printf("\n You Won In Second Chance");
+        break;
+    }
+    else if(n==sn  &&  j==3)
+    {
+        printf("\n You Won In Third Chance");
+        break;
+    }
+    else if(n!=sn  && (j==1 || j==2))
+    {
+        printf("\n It's Incorrect, Try Again");
+    }
+    else
+    {
+        printf("\n You Lost The Game");
+    }
+    }    
+    return 0;
+}
